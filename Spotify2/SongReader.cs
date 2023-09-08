@@ -18,6 +18,10 @@ namespace Spotify2
         private Song inPlaying;
         private List<Song> songs;
 
+        //private string selectedArtist = "";
+        //private string selectedAlbum = "";
+        //private string selectedSong = "";
+
         public SongReader(List<Song> s)
         {
             songs = s;
@@ -43,8 +47,34 @@ namespace Spotify2
             }
             Menu.ChoseNumber();
             visualInput = int.Parse(Console.ReadLine());
-            string selectedAlbum = artists[visualInput];
+            string selectedArtist = artists[visualInput];
+            ShowAlbums(selectedArtist);
+        }
+
+        public void ShowAlbums(string art)
+        {
+            List<string> albums = (
+                from a in songs
+                where a.artist == art
+                select new { a.album, a.artist }).Select(a => a.album).Distinct().OrderBy(a => a).ToList();
+
+
+
+
+            int i = 0;
+            foreach (var item in albums) //stampa le due proprietà che ho estratto
+            {
+
+                Console.WriteLine($" {i}  {item} ");
+                i += 1;
+
+            }
+            Menu.ChoseNumber();
+            visualInput = int.Parse(Console.ReadLine());
+            string selectedAlbum = albums[visualInput];
             ShowSongs(selectedAlbum);
+
+
         }
 
 
