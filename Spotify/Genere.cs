@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CountryExercise
+namespace Spotify
 {
-    internal interface IONU
+    public enum Genere
     {
-        void PopulationControl();
-        void TerritoriesControl();
-
+        Rock = 0,
+        Pop = 1,
+        Rap = 2
     }
 }

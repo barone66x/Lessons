@@ -13,7 +13,9 @@ namespace Exercise1
             CountryDeathPunishment country2 = new CountryDeathPunishment();
             country2.Name = "IRAQ";
             CountryDeathPunishment country3 = new CountryDeathPunishment();
-            country3.Name = "Rubiland";
+            country3.Name = "Rubilandd";
+
+
 
 
             EuroCentralBank.ApplySpred(country);

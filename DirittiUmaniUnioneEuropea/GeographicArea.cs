@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CountryExercise
+namespace DirittiUmaniUnioneEuropea
 {
-    internal interface IONU
+    public class GeographicArea
     {
-        void PopulationControl();
-        void TerritoriesControl();
-
     }
 }

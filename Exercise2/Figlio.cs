@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CountryExercise
+namespace Exercise2
 {
-    internal interface IONU
+    internal class Figlio : Padre
     {
-        void PopulationControl();
-        void TerritoriesControl();
-
+        public int b;
     }
 }

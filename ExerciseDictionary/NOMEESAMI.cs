@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CountryExercise
+namespace ExerciseDictionary
 {
-    internal interface IONU
+    internal enum NOMEESAMI
     {
-        void PopulationControl();
-        void TerritoriesControl();
-
+        chimica = 0,
+        fisica = 1,
+        informatica = 2
     }
 }

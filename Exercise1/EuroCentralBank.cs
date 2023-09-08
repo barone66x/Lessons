@@ -26,6 +26,7 @@ namespace Exercise1
 
         {
             Console.WriteLine($"{country.Name} doesn't have EURO coin and I can't calculate spred");
+
         }
     }
 }

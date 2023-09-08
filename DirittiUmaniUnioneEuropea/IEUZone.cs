@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CountryExercise
+namespace DirittiUmaniUnioneEuropea
 {
-    internal interface IONU
+    internal interface IEUZone
     {
-        void PopulationControl();
-        void TerritoriesControl();
-
+        void GestionePermessodiSoggiorno();
     }
 }

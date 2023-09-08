@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CountryExercise
+namespace Spotify
 {
-    internal interface IONU
+    internal class Playlist : Raccolta
     {
-        void PopulationControl();
-        void TerritoriesControl();
-
     }
 }

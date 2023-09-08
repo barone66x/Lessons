@@ -19,5 +19,23 @@ namespace CountryExercise
             Console.WriteLine($"{country.Name} doesn't apply Death Punishment");
 
         }
+
+        public void Test() { }
+
+
+
+        //public static void HumanRightsInvestigation(IONU ONUcountry) //UP-CASTING
+        //{
+        //    try
+        //    {
+        //        CountryDeathPunishment countryDeath = (CountryDeathPunishment)ONUcountry;
+        //        Console.WriteLine($"{countryDeath.Name} apply Death Punishment");
+        //    }
+        //    catch ( InvalidCastException ex)
+        //    {
+        //        ONUcountry country 
+        //    }
+
+        //}
     }
 }
