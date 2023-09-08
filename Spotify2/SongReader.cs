@@ -16,7 +16,10 @@ namespace Spotify2
         private string choice;
         private string menuChoice;
         private Song inPlaying;
+        private string inPlaying2;
         private List<Song> songs;
+        public string currentAlbum;
+        public string currentSongIndex;
 
         //private string selectedArtist = "";
         //private string selectedAlbum = "";
@@ -71,8 +74,9 @@ namespace Spotify2
             }
             Menu.ChoseNumber();
             visualInput = int.Parse(Console.ReadLine());
-            string selectedAlbum = albums[visualInput];
-            ShowSongs(selectedAlbum);
+            string currentAlbum = albums[visualInput];
+
+            ShowSongs(currentAlbum);
 
 
         }
@@ -128,23 +132,26 @@ namespace Spotify2
             }
             Menu.ChoseNumber();
             visualInput = int.Parse(Console.ReadLine());
-            CurrentPlay(visualInput);
+            string selectedSong = titles[visualInput];
+            CurrentPlay(selectedSong, album);
 
         }
 
 
-        public void CurrentPlay(int numberInput)
+        public void CurrentPlay(string selectsong, string albu)
         {
+
             Console.WriteLine("- - - - - - - - - - - - - - ");
-            inPlaying = songs[numberInput];
-            Console.WriteLine($"Now in Playing: {inPlaying.title}");
+            Song Test = (
+                from a in songs
+                where a.album == albu && a.title == selectsong
+                select a).FirstOrDefault();
+
+            Console.WriteLine($"Now in Playing: {Test.title}");
             Console.WriteLine("- - - - - - - - - - - - - - ");
-            Menu.ShowMenu();
-            menuChoice = Scegli();
+            //Menu.ShowMenu();
+            //menuChoice = Scegli();
             //NextAction(menuChoice);
-
-
-
 
         }
 
@@ -195,17 +202,17 @@ namespace Spotify2
         //}
 
 
-        public void Exit()
-        {
-            return;
-        }
+        //public void Exit()
+        //{
+        //    return;
+        //}
 
-        public string Scegli()
-        {
-            //Menu.ShowMenu();
-            menuChoice = Console.ReadLine();
-            return menuChoice;
-        }
+        //public string Scegli()
+        //{
+        //    Menu.ShowMenu();
+        //    menuChoice = Console.ReadLine();
+        //    return menuChoice;
+        //}
 
         //public void NextAction(string choice)
         //{
@@ -213,9 +220,7 @@ namespace Spotify2
 
         //    {
         //        case "f":
-        //            Next();
-
-        //            break;
+        //            Next(); break;
         //        case "b":
         //            Previous(); break;
         //        case "p":
@@ -228,6 +233,7 @@ namespace Spotify2
 
         //    }
 
+        //}
     }
 }
 
