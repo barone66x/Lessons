@@ -10,7 +10,7 @@ namespace Spotify2
             Console.WriteLine("Hello World!");
             List<Song> songs = new List<Song>();
             songs = FileReader.Reader();
-            Lettore lettore = new Lettore(songs);
+            SongReader lettore = new SongReader(songs);
             lettore.ShowArtists();
         }
     }
